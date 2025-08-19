@@ -11,14 +11,14 @@ html {
 }
 
 body {
-    background: linear-gradient(to right, black,blue);
+    background: linear-gradient(to right, purple,blue);
     color: white;
     font-family: sans-serif;
 }
 
 /* HEADER SECTION STYLING */
 .header__nav {
-    background-color: rgb(13, 13, 46);
+    background-color: rgb(32, 32, 204);
     padding: 0.7rem;
     position: fixed;
     top: 0;
@@ -67,7 +67,7 @@ body {
 }
 
 .about__img {
-    width: 220px;
+    width: 270px;
     height: auto;
     border: 2px solid blue;
     border-radius: 50%;
@@ -101,6 +101,16 @@ h3 {
     background-color: darkblue;
     transform: scale(99%);
     transition: background-color 0.3s ease-in-out,transform 0.3s ease-in-out;
+}
+.special {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+.ai {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(165, 165, 250);
+    margin-left: 2.4rem;
 }
 /* About Me SECTION STYLING */
 
