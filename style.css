@@ -39,7 +39,7 @@ body {
 }
 .item:hover {
     transform: scale(98%);
-    color: blue;
+    color: rgb(106, 106, 250);
     transition: color 0.3s ease-in-out,transform 0.3s ease-in-out;
 }
 /* MAIN SECTION STYLING */
@@ -366,18 +366,20 @@ h3 {
     margin-top: 2rem;
 }
 .contact__items {
-    text-decoration: none;
-    color: white;
     font-size: 1rem;
     font-weight: 800;
     padding: 0.4rem;
     cursor: pointer;
 }
+.contact__link {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 0.4rem;
+}
 .contact__items:hover {
-    background-color: rgb(0, 0, 92);
-    border: 1px solid rgb(0, 0, 92);
-    border-radius: 0.5rem;
-    transition: background-color 0.4s ease-in-out,transform 0.4s ease-in-out,border-radius 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
     transform: translateY(5px);
 }
 
