@@ -1,4 +1,6 @@
-/* GENERAL STYLES */
+/* ============== 
+   GENERAL STYLES
+   ============== */
 
 * {
     margin: 0;
@@ -11,12 +13,15 @@ html {
 }
 
 body {
+    width: 100%;
     background: linear-gradient(to right, purple,blue);
     color: white;
     font-family: sans-serif;
 }
 
-/* HEADER SECTION STYLING */
+/* ======================
+   HEADER SECTION STYLING
+   ====================== */
 .header__nav {
     background-color: rgb(32, 32, 204);
     padding: 0.7rem;
@@ -42,9 +47,13 @@ body {
     color: rgb(106, 106, 250);
     transition: color 0.3s ease-in-out,transform 0.3s ease-in-out;
 }
-/* MAIN SECTION STYLING */
+/* ==================== 
+   MAIN SECTION STYLING
+   ==================== */
 
-/* ABOUT SECTION STYLING */
+/* ====================
+   HOME SECTION STYLING
+   ==================== */
 .about {
     padding: 8rem;
     display: flex;
@@ -111,13 +120,18 @@ h3 {
     margin-top: 1rem;
     font-size: 1.3rem;
 }
+.content__items {
+    font-size: 1.25rem;
+}
 .ai {
     font-size: 2rem;
     font-weight: 700;
     color: rgb(165, 165, 250);
     margin-left: 2.4rem;
 }
-/* About Me SECTION STYLING */
+/* ======================== 
+   ABOUT ME SECTION STYLING 
+   ======================== */
 
 .me {
     padding: 8rem;
@@ -136,40 +150,27 @@ h3 {
 }
 .brief__2 {
     font-size: 1.3rem;
+    width: 85%;
 }
-/* SKILLS SECTION STYLING */
-
+/* ================================
+   TECHNICAL SKILLS SECTION STYLING
+   ================================ */
+.Skills {
+    padding: 7rem;
+}
 .skills__h2 {
     text-align: center;
     font-size: 40px;
     font-weight: 800;
     margin-top: 2rem;
     margin-bottom: 5rem;
+    white-space: nowrap;
 }
 .container_skills {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
-    padding: 7rem;
-}
-@media (min-width: 640px) { /* Equivalent to Tailwind's 'sm' breakpoint */
-    .container_skills {
-        grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
-    }
-}
-
-        /* Medium screens (e.g., small desktops) - 3 columns */
-@media (min-width: 768px) { /* Equivalent to Tailwind's 'md' breakpoint */
-    .container_skills {
-        grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    }
-}
-
-        /* Large screens (e.g., larger desktops) - 3 columns (for 5 items, this creates 3+2 layout) */
-@media (min-width: 1024px) { /* Equivalent to Tailwind's 'lg' breakpoint */
-    .container_skills {
-        grid-template-columns: repeat(3, 1fr); /* Still 3 columns for consistency, 5 items will naturally wrap */
-    }
+    padding: 3rem;
 }
 .skills {
     border: 1px solid rgb(2, 2, 85);
@@ -244,6 +245,23 @@ h3 {
     white-space: nowrap; 
 }
 
+/* ===========================
+   SOFT SKILLS SECTION STYLING 
+   =========================== */
+.container_soft_skills {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.soft {
+    color: lightblue;
+}
+
+/* =======================
+   PROJECT SECTION STYLING
+   ======================= */
+
 .projects {
     padding: 7rem;
 }
@@ -269,16 +287,18 @@ h3 {
     border-radius: 1rem;
     padding: 7px;
     background-color: rgb(0, 0, 66);
-    /* width: 21%; */
     white-space: nowrap;
-    /* margin-right: 21.5rem; */
 }
 .the-project:hover {
     background-color: rgb(0, 0, 125);
-    /* border: 1px solid rgb(0,0,125); */
     transform: scale(98%);
     transition: background-color 0.4s ease-in-out,transform 0.4s ease-in-out;
 }
+
+/* =========================================
+   EXPERIENCE AND ACTIVITIES SECTION STYLING
+   ========================================= */
+
 .experience {
     padding: 7rem;
 }
@@ -303,6 +323,26 @@ h3 {
 .experience__list {
     font-size: 15px;
 }
+.activity__h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    white-space: nowrap;
+}
+.activities {
+    margin-top: 1.5rem;
+}
+.activity__item {
+    list-style-type: none;
+    margin-top: 0.5rem;
+}
+
+/* =========================
+   EDUCATION SECTION STYLING
+   ========================= */
+
 .education {
     padding: 7rem;
 }
@@ -329,22 +369,10 @@ h3 {
     list-style-type: none;
     margin-top: 0.5rem;
 }
-.activity__h2 {
-    text-align: center;
-    font-size: 40px;
-    font-weight: 800;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    white-space: nowrap;
-}
-.activities {
-    margin-top: 1.5rem;
-}
-.activity__item {
-    list-style-type: none;
-    margin-top: 0.5rem;
-}
-/* FOOTER SECTION STYLING */
+
+/* ======================
+   FOOTER SECTION STYLING
+   ====================== */
 
 .footer {
     padding: 7rem;
@@ -352,10 +380,7 @@ h3 {
 .contact {
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
     width: 100%;
-    /* height: 80vw; */
     gap: 30px;   
 }
 .contact__h2 {
@@ -387,7 +412,14 @@ h3 {
     transition: transform 0.4s ease-in-out;
     transform: translateY(5px);
 }
-
+.footer p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    white-space: nowrap;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
 /* =========================
    RESPONSIVE MEDIA QUERIES
    ========================= */
@@ -400,7 +432,8 @@ h3 {
         gap: 10px;
     }
     body {
-        background-color: blue;
+        width: 100%;
+        background: linear-gradient(to right, purple,blue);
     }
 
     .about, .me, .projects, .experience, .education, .footer {
@@ -408,7 +441,7 @@ h3 {
     }
 
     .container__header {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         text-align: center;
     }
@@ -417,16 +450,34 @@ h3 {
         width: 60%;
         font-size: 0.9rem;
     }
-
-    .PL, .WD, .tool, .database__item {
-        max-width: 23%;
+    .database__item {
+        max-width: 11.5%;
+    }
+    .PL {
+        max-width: 17%;
+    }
+    .WD {
+        max-width: 40%;
         font-size: 13px;
     }
-
-    .tools, .web {
+    .tool {
+        max-width: 40%;
+        font-size: 13px;
+    }
+    .tools {
+        flex-direction: column;
+    }
+    .soft_skills__items {
+        white-space: wrap;
+        max-width: 70%;
+        font-size: 13px;
+    }
+    .activity__h2 {
+        white-space: wrap;
+    }
+    .tools, .web, .soft_skills__list {
         flex-wrap: wrap;
     }
-
     .contact__ul {
         flex-direction: column;
         align-items: center;
@@ -440,26 +491,33 @@ h3 {
     .about__img {
         width: 200px;
         margin-top: 1.5rem;
-}
+    }
+    .footer p {
+        white-space: wrap;
+    }
+    .container_soft_skills {
+        grid-template-columns: 1fr;
+  }
 
 }
 
 /* Tablet: 481px–768px */
 @media (min-width: 481px) and (max-width: 768px) {
     .header__ul {
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         justify-content: center;
         gap: 15px;
     }
     body {
-        background-color: blue;
+        width: 100%;
+        background: linear-gradient(to right, purple,blue);
     }
     .about, .me, .projects, .experience, .education, .footer {
         padding: 5rem 2rem;
     }
 
     .container__header {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         text-align: center;
     }
@@ -469,16 +527,21 @@ h3 {
         font-size: 0.95rem;
     }
 
-    .PL, .WD, .tool, .database__item {
+    .PL, .WD, .database__item {
         max-width: 40%;
         font-size: 14px;
     }
-
-    .tools, .web {
+    .tool {
+        max-width: 80%;
+        font-size: 14px;
+    }
+    .tools, .web, .soft_skills__list{
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    .soft_skills__items {
+        max-width: 50%;
+    }
     .contact__ul {
         flex-direction: column;
         align-items: center;
@@ -493,6 +556,12 @@ h3 {
         width: 250px;
         margin-top: 1.5rem;
     }
+    .footer p {
+        white-space: wrap;
+    }
+    .container_soft_skills {
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
@@ -503,7 +572,8 @@ h3 {
         gap: 15px;
     }
     body {
-        background-color: blue;
+        width: 100%;
+        background: linear-gradient(to right, purple,blue);
     }
     .about, .me, .projects, .experience, .education, .footer {
         padding: 6rem 3rem;
@@ -521,11 +591,13 @@ h3 {
         font-size: 1rem;
     }
 
-    .PL, .WD, .tool, .database__item {
+    .PL, .WD, .database__item {
         max-width: 30%;
         font-size: 15px;
     }
-
+    .tool {
+        max-width: 80%;
+    }
     .tools, .web {
         flex-wrap: wrap;
         justify-content: center;
@@ -544,5 +616,29 @@ h3 {
     .about__img {
         width: 280px;
     }
+    .footer p {
+        white-space: wrap;
+    }
+    .container_soft_skills {
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 640px) { /* Equivalent to Tailwind's 'sm' breakpoint */
+    .container_skills {
+        grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    }
 }
 
+        /* Medium screens (e.g., small desktops) - 3 columns */
+@media (min-width: 768px) { /* Equivalent to Tailwind's 'md' breakpoint */
+    .container_skills {
+        grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    }
+}
+
+        /* Large screens (e.g., larger desktops) - 3 columns (for 5 items, this creates 3+2 layout) */
+@media (min-width: 1024px) { /* Equivalent to Tailwind's 'lg' breakpoint */
+    .container_skills {
+        grid-template-columns: repeat(3, 1fr); /* Still 3 columns for consistency, 5 items will naturally wrap */
+    }
+}
